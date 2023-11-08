@@ -1,6 +1,6 @@
 
 
-En el siguiente fragmento de código muestra un escenario común en el que un controlador carga 
+En el siguiente fragmento de código muestra un escenario en el que un controlador carga 
 un objeto desde la base de datos, pero no verifica si existe antes de pasarlo a la vista. 
 
 ```
@@ -15,3 +15,5 @@ end
 -# will give "undefined method 'title' for nil:NilClass" if @movie is nil
 ```
 Esto puede llevar a un error "undefined method 'title' for nil:NilClass" si el objeto no se encuentra en la base de datos.
+
+Para ello podemos configurar y utilizar un sistema de registro de errores (logger) para registrar errores y eventos importantes en la aplicación. Esto nos ayudará a depurar problemas cuando ocurran en producción y a comprender lo que sucede en la aplicación.
