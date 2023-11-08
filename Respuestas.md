@@ -1,0 +1,17 @@
+
+
+En el siguiente fragmento de código muestra un escenario común en el que un controlador carga 
+un objeto desde la base de datos, pero no verifica si existe antes de pasarlo a la vista. 
+
+```
+# in controller action:
+def show
+  @movie = Movie.find_by_id(params[:id]) # what if this movie not in DB?
+  # BUG: we should check @movie for validity here!
+end
+-# ...later, in the Haml view:
+
+%h1= @movie.title
+-# will give "undefined method 'title' for nil:NilClass" if @movie is nil
+```
+Esto puede llevar a un error "undefined method 'title' for nil:NilClass" si el objeto no se encuentra en la base de datos.
