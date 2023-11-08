@@ -16,4 +16,4 @@ end
 ```
 Esto puede llevar a un error "undefined method 'title' for nil:NilClass" si el objeto no se encuentra en la base de datos.
 
-Para ello podemos configurar y utilizar un sistema de registro de errores (logger) para registrar errores y eventos importantes en la aplicación. Esto nos ayudará a depurar problemas cuando ocurran en producción y a comprender lo que sucede en la aplicación.
+Para ello podemos configurar y utilizar un sistema de registro de errores (logger) para registrar errores y eventos importantes en la aplicación. Esto nos ayudará a depurar problemas cuando ocurran y a comprender lo que sucede en la aplicación. Con ello podemos buscar en la documentación y en la comunidad de desarrolladores, y ser específico en las preguntas que vamos a formular, esto nos ayudará a resolver problemas de manera efectiva y solucionarlos antes de que lleguen a la producción.
